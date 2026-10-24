@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #242321;
+  background: #fffaf4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+a { text-decoration: none; }
+
+.page-wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.eyebrow { color: #f36b3f; font-size: 10px; font-weight: 900; letter-spacing: .15em; }
+.section-title { color: #242321; font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 900; letter-spacing: -.04em; line-height: 1.15; }
+.category-chip { display: flex; min-height: 104px; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #f5e4d8; border-radius: 20px; background: white; color: #77736e; transition: all .2s ease; }
+.category-chip:hover { transform: translateY(-2px); border-color: #f6b29a; }
+.category-active { border-color: #f36b3f; background: #fff0e8; color: #f36b3f; box-shadow: 0 5px 18px rgba(243,107,63,.08); }
+.form-input { display: block; width: 100%; margin-top: 7px; border: 1px solid #f0e1d7; border-radius: 12px; background: #fffdfa; padding: 12px 13px; color: #242321; outline: none; transition: border .2s, box-shadow .2s; }
+.form-input:focus { border-color: #f36b3f; box-shadow: 0 0 0 3px rgba(243,107,63,.1); }
+.field-label { display: block; font-size: 13px; font-weight: 800; color: #34312d; }
+.field-error { display: block; margin-top: 5px; font-size: 11px; font-weight: 600; color: #d94c3a; }
+.hero-panel { isolation: isolate; }
+@media (max-width: 640px) {
+  .page-wrap { width: min(100% - 28px, 1180px); }
+  .category-chip { min-height: 90px; border-radius: 16px; }
+}
